@@ -24,9 +24,29 @@
 			color: rgb(183, 149, 166);
 		}
 		
-		.nav-child
-		{
-			display: none;
+		li.deeper {
+			position: relative;
+			
+			.nav-child
+			{
+				display: none;
+				position: absolute;
+				box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+				z-index: 1;
+			}
+		}
+		
+		li.deeper:hover .nav-child {
+			display: block;
+			padding-top: 10px;
+			padding-bottom: 5px;
+
+			li {
+				display: block;
+				margin-left: 10px;
+				margin-bottom: 5px;
+				white-space: nowrap;
+			}
 		}
 	}
 }
