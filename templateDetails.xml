@@ -12,6 +12,7 @@
 	<files>
 		<filename>index.php</filename>
 		<filename>templateDetails.xml</filename>
+		<folder>html</folder>
 	</files>
 	<positions>
 		<position>title</position>
