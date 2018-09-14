@@ -79,7 +79,7 @@ $tparams = $this->item->params;
 		<?php elseif ($presentation_style === 'plain') : ?>
 <!--			<?php echo '<h3>' . JText::_('COM_CONTACT_DETAILS') . '</h3>'; ?>  -->
 		<?php endif; ?>
-		<div style="float: right;">
+		<div class="addres">
 		<?php if ($this->contact->image && $tparams->get('show_image')) : ?>
 			<div class="thumbnail pull-right">
 				<?php echo JHtml::_('image', $this->contact->image, $this->contact->name, array('itemprop' => 'image')); ?>
