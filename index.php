@@ -31,9 +31,7 @@
 				<div class="row" id="main">
 					<div class="col-12 col-s-12 col-m-12" id="component_wrapper">
 						<div id="messages"><jdoc:include type="message" /></div>
-<?php if (($menu->getActive() != $menu->getDefault())) : ?>
 						<div id="component"><jdoc:include type="component" /></div>
-<?php endif ?>
 					</div>
 				</div>			 
 				<div class="row" id="footer">
