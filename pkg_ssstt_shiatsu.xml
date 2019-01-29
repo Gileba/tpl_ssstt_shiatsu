@@ -9,7 +9,7 @@
 	<infourl title="Ssstt Shiatsu Template Package">https://github.com/Gileba/tpl_ssstt_shiatsu/releases/tag/0.1.0</infourl>
 	<description>Package containing the template and its dependancies for Ssstt Shiatsu</description>
 	<files folder="packages">
-		<file type="template" id="ssstt_shiatsu" client="site">tpl_ssstt_shiatsu.zip</file>
+		<file type="template" id="tpl_ssstt_shiatsu" client="site">tpl_ssstt_shiatsu.zip</file>
 		<file type="plugin" id="templatecompanion" group="system">plg_system_templatecompanion.zip</file>
 	</files>
 	<updateservers>
