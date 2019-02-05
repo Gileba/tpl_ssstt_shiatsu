@@ -1,0 +1,36 @@
+language: php
+php:
+- '7.0'
+- '7.1'
+- '7.2'
+- '7.3'
+- nightly
+env:
+  matrix:
+  - DB=mysql
+matrix:
+  allow_failures:
+  - php: nightly
+before_script:
+- phpenv config-rm xdebug.ini
+script:
+- phpunit --configuration travisci-phpunit.xml --no-configuration tests
+before_deploy:
+- cd ..
+- mkdir packages
+- zip -r packages/tpl_ssstt_shiatsu.zip tpl_ssstt_shiatsu -x \*.git\* \*tests\* *travisci-phpunit.xml*
+  *.travis.yml* *pkg_ssstt_shiatsu.xml* *tpl_ssstt_shiatsu.xml*
+- git clone -b 1.0.0 https://github.com/Gileba/plg_system_templatecompanion.git plg_system_templatecompanion
+- cd plg_system_templatecompanion/src; zip -r ../../packages/plg_system_templatecompanion.zip * -x \*.git\* *.gitignore*; cd ../../
+- cp tpl_ssstt_shiatsu/pkg_ssstt_shiatsu.xml pkg_ssstt_shiatsu.xml
+- zip pkg_ssstt_shiatsu packages/tpl_ssstt_shiatsu.zip packages/plg_system_templatecompanion.zip pkg_ssstt_shiatsu.xml
+deploy:
+  provider: releases
+  file:
+  - packages/tpl_ssstt_shiatsu.zip
+  - pkg_ssstt_shiatsu.zip
+  skip_cleanup: true
+  on:
+    tags: true
+  api_key: $GITHUB_TOKEN
+after_deploy: curl -T tpl_ssstt_shiatsu/tpl_ssstt_shiatsu.xml -u $FTP_USER:$FTP_PASSWORD $FTP_SERVER
