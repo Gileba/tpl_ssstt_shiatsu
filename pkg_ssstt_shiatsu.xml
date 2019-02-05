@@ -2,11 +2,11 @@
 <extension type="package" version="3.7" method="upgrade">
 	<name>Ssstt Shiatsu Package</name>
 	<author>Gijs Lamon</author>
-	<creationDate>2019-01-29</creationDate>
+	<creationDate>2019-02-05</creationDate>
 	<packagename>ssstt_shiatsu</packagename>
-	<version>0.1.0</version>
+	<version>1.0.0</version>
 	<packager>Gijs Lamon</packager>
-	<infourl title="Ssstt Shiatsu Template Package">https://github.com/Gileba/tpl_ssstt_shiatsu/releases/tag/0.1.0</infourl>
+	<infourl title="Ssstt Shiatsu Template Package">https://github.com/Gileba/tpl_ssstt_shiatsu/releases/tag/1.0.0</infourl>
 	<description>Package containing the template and its dependancies for Ssstt Shiatsu</description>
 	<files folder="packages">
 		<file type="template" id="tpl_ssstt_shiatsu" client="site">tpl_ssstt_shiatsu.zip</file>
