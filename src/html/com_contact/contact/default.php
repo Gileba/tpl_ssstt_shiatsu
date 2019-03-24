@@ -106,26 +106,26 @@ $tparams = $this->item->params;
 		<?php endif; ?>
 		</div>
 
-	<?php if ($this->contact->misc && $tparams->get('show_misc')) : ?>
-		<?php if ($presentation_style === 'sliders') : ?>
-			<?php if (!$accordionStarted)
-			{
-				echo JHtml::_('bootstrap.startAccordion', 'slide-contact', array('active' => 'display-misc'));
-				$accordionStarted = true;
-			}
-			?>
-			<?php echo JHtml::_('bootstrap.addSlide', 'slide-contact', JText::_('COM_CONTACT_OTHER_INFORMATION'), 'display-misc'); ?>
-		<?php elseif ($presentation_style === 'tabs') : ?>
-			<?php if (!$tabSetStarted)
-			{
-				echo JHtml::_('bootstrap.startTabSet', 'myTab', array('active' => 'display-misc'));
-				$tabSetStarted = true;
-			}
-			?>
-			<?php echo JHtml::_('bootstrap.addTab', 'myTab', 'display-misc', JText::_('COM_CONTACT_OTHER_INFORMATION')); ?>
-		<?php elseif ($presentation_style === 'plain') : ?>
+		<?php if ($this->contact->misc && $tparams->get('show_misc')) : ?>
+			<?php if ($presentation_style === 'sliders') : ?>
+				<?php if (!$accordionStarted)
+				{
+					echo JHtml::_('bootstrap.startAccordion', 'slide-contact', array('active' => 'display-misc'));
+					$accordionStarted = true;
+				}
+				?>
+				<?php echo JHtml::_('bootstrap.addSlide', 'slide-contact', JText::_('COM_CONTACT_OTHER_INFORMATION'), 'display-misc'); ?>
+			<?php elseif ($presentation_style === 'tabs') : ?>
+				<?php if (!$tabSetStarted)
+				{
+					echo JHtml::_('bootstrap.startTabSet', 'myTab', array('active' => 'display-misc'));
+					$tabSetStarted = true;
+				}
+				?>
+				<?php echo JHtml::_('bootstrap.addTab', 'myTab', 'display-misc', JText::_('COM_CONTACT_OTHER_INFORMATION')); ?>
+			<?php elseif ($presentation_style === 'plain') : ?>
 <!--			<?php echo '<h3>' . JText::_('COM_CONTACT_OTHER_INFORMATION') . '</h3>'; ?> -->
-		<?php endif; ?>
+			<?php endif; ?>
 
 		<div class="contact-miscinfo">
 			<dl class="dl-horizontal">
@@ -142,12 +142,12 @@ $tparams = $this->item->params;
 			</dl>
 		</div>
 
-		<?php if ($presentation_style === 'sliders') : ?>
-			<?php echo JHtml::_('bootstrap.endSlide'); ?>
-		<?php elseif ($presentation_style === 'tabs') : ?>
-			<?php echo JHtml::_('bootstrap.endTab'); ?>
+			<?php if ($presentation_style === 'sliders') : ?>
+				<?php echo JHtml::_('bootstrap.endSlide'); ?>
+			<?php elseif ($presentation_style === 'tabs') : ?>
+				<?php echo JHtml::_('bootstrap.endTab'); ?>
+			<?php endif; ?>
 		<?php endif; ?>
-	<?php endif; ?>
 
 
 		<?php if ($presentation_style === 'sliders') : ?>
