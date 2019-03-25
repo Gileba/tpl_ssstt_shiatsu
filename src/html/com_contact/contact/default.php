@@ -54,7 +54,9 @@ $tparams = $this->item->params;
 	<?php if ($tparams->get('show_contact_list') && count($this->contacts) > 1) : ?>
 		<form action="#" method="get" name="selectForm" id="selectForm">
 			<label for="select_contact"><?php echo JText::_('COM_CONTACT_SELECT_CONTACT'); ?></label>
-			<?php echo JHtml::_('select.genericlist', $this->contacts, 'select_contact', 'class="inputbox" onchange="document.location.href = this.value"', 'link', 'name', $this->contact->link); ?>
+			<?php echo JHtml::_('select.genericlist', $this->contacts, 'select_contact',
+				'class="inputbox" onchange="document.location.href = this.value"', 'link', 'name', $this->contact->link
+			); ?>
 		</form>
 	<?php endif; ?>
 
@@ -82,7 +84,9 @@ $tparams = $this->item->params;
 		<div class="address">
 		<?php if ($this->contact->image && $tparams->get('show_image')) : ?>
 			<div class="thumbnail pull-right">
-				<?php echo JHtml::_('image', $this->contact->image, htmlspecialchars($this->contact->name, ENT_QUOTES, 'UTF_8'), array('itemprop' => 'image')); ?>
+				<?php echo JHtml::_('image', $this->contact->image, htmlspecialchars($this->contact->name, ENT_QUOTES, 'UTF_8'),
+					array('itemprop' => 'image')
+				); ?>
 			</div>
 		<?php endif; ?>
 
@@ -106,26 +110,26 @@ $tparams = $this->item->params;
 		<?php endif; ?>
 		</div>
 
-	<?php if ($this->contact->misc && $tparams->get('show_misc')) : ?>
-		<?php if ($presentation_style === 'sliders') : ?>
-			<?php if (!$accordionStarted)
-			{
-				echo JHtml::_('bootstrap.startAccordion', 'slide-contact', array('active' => 'display-misc'));
-				$accordionStarted = true;
-			}
-			?>
-			<?php echo JHtml::_('bootstrap.addSlide', 'slide-contact', JText::_('COM_CONTACT_OTHER_INFORMATION'), 'display-misc'); ?>
-		<?php elseif ($presentation_style === 'tabs') : ?>
-			<?php if (!$tabSetStarted)
-			{
-				echo JHtml::_('bootstrap.startTabSet', 'myTab', array('active' => 'display-misc'));
-				$tabSetStarted = true;
-			}
-			?>
-			<?php echo JHtml::_('bootstrap.addTab', 'myTab', 'display-misc', JText::_('COM_CONTACT_OTHER_INFORMATION')); ?>
-		<?php elseif ($presentation_style === 'plain') : ?>
+		<?php if ($this->contact->misc && $tparams->get('show_misc')) : ?>
+			<?php if ($presentation_style === 'sliders') : ?>
+				<?php if (!$accordionStarted)
+				{
+					echo JHtml::_('bootstrap.startAccordion', 'slide-contact', array('active' => 'display-misc'));
+					$accordionStarted = true;
+				}
+				?>
+				<?php echo JHtml::_('bootstrap.addSlide', 'slide-contact', JText::_('COM_CONTACT_OTHER_INFORMATION'), 'display-misc'); ?>
+			<?php elseif ($presentation_style === 'tabs') : ?>
+				<?php if (!$tabSetStarted)
+				{
+					echo JHtml::_('bootstrap.startTabSet', 'myTab', array('active' => 'display-misc'));
+					$tabSetStarted = true;
+				}
+				?>
+				<?php echo JHtml::_('bootstrap.addTab', 'myTab', 'display-misc', JText::_('COM_CONTACT_OTHER_INFORMATION')); ?>
+			<?php elseif ($presentation_style === 'plain') : ?>
 <!--			<?php echo '<h3>' . JText::_('COM_CONTACT_OTHER_INFORMATION') . '</h3>'; ?> -->
-		<?php endif; ?>
+			<?php endif; ?>
 
 		<div class="contact-miscinfo">
 			<dl class="dl-horizontal">
@@ -142,12 +146,12 @@ $tparams = $this->item->params;
 			</dl>
 		</div>
 
-		<?php if ($presentation_style === 'sliders') : ?>
-			<?php echo JHtml::_('bootstrap.endSlide'); ?>
-		<?php elseif ($presentation_style === 'tabs') : ?>
-			<?php echo JHtml::_('bootstrap.endTab'); ?>
+			<?php if ($presentation_style === 'sliders') : ?>
+				<?php echo JHtml::_('bootstrap.endSlide'); ?>
+			<?php elseif ($presentation_style === 'tabs') : ?>
+				<?php echo JHtml::_('bootstrap.endTab'); ?>
+			<?php endif; ?>
 		<?php endif; ?>
-	<?php endif; ?>
 
 
 		<?php if ($presentation_style === 'sliders') : ?>
