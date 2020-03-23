@@ -4,17 +4,17 @@ php:
 - '7.1'
 - '7.2'
 - '7.3'
+- '7.4'
 - nightly
-env:
-  matrix:
-  - DB=mysql
-matrix:
+jobs:
   allow_failures:
   - php: nightly
 before_script:
+- composer require --dev phpunit/phpunit
+- composer require --dev phpunit/php-code-coverage
 - phpenv config-rm xdebug.ini
 script:
-- phpunit --configuration travisci-phpunit.xml --no-configuration tests
+- ./vendor/bin/phpunit --configuration travisci-phpunit.xml --no-configuration tests
 before_deploy:
 - cd ..
 - mkdir packages
@@ -25,10 +25,10 @@ before_deploy:
 - zip pkg_ssstt_shiatsu packages/tpl_ssstt_shiatsu.zip packages/plg_system_templatecompanion.zip pkg_ssstt_shiatsu.xml
 deploy:
   provider: releases
+  edge: true
   file:
   - packages/tpl_ssstt_shiatsu.zip
   - pkg_ssstt_shiatsu.zip
-  skip_cleanup: true
   on:
     tags: true
   api_key: $GITHUB_TOKEN
