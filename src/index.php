@@ -20,6 +20,7 @@
 	<body>
 		<div id="container">
 			<div id="wrapper">
+				<div class="offcanvas"><jdoc:include type="modules" name="offcanvas" /></div>
 				<div class="row" id="title">
 					<div class="col-12 col-s-12 col-m-12 col-p-0"><jdoc:include type="modules" name="title" /></div>
 				</div>
@@ -40,5 +41,6 @@
 				</div>
 			</div>
 		</div>
+		<script src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/js/hamburger.js"></script>
 	</body>
 </html>

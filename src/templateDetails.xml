@@ -22,6 +22,7 @@
 		<position>nav</position>
 		<position>header</position>
 		<position>footer</position>
+		<position>offcanvas</position>
 	</positions>
 	<config>
 		<fieldset name="params">
