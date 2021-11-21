@@ -7,7 +7,7 @@
 	<authorUrl>http://www.gileba.be/</authorUrl>
 	<copyright>(c) 2018-2019 by Gileba, based on the original layout of the website made by Marleen Debuisson-Zwartebroeckx with VistaPrint</copyright>
 	<license>GNU/GPL</license>
-	<version>1.0.3</version>
+	<version>1.0.4</version>
 	<description>Template for Ssstt Shiatsu</description>
 	<files>
 		<filename>index.php</filename>
