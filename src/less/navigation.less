@@ -18,15 +18,15 @@
 			border-bottom: 2px solid #f9c55a;
 			color: black;
 		}
-		
+
 		.active {
 			border-bottom: 2px solid rgb(183, 149, 166);
 			color: rgb(183, 149, 166);
 		}
-		
+
 		.deeper {
 			position: relative;
-			
+
 			.nav-child
 			{
 				display: none;
@@ -34,11 +34,12 @@
 				background-color: white;
 				box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 				z-index: 1;
-				
+				left: 0; /** Needed by FF and Chrome to have submenu under menu **/
+
 				li
 				{
 					border-bottom: none;
-					
+
 					a
 					{
 						border-bottom: 2px solid #f9c55a;
@@ -46,7 +47,7 @@
 				}
 			}
 		}
-		
+
 		.deeper:hover .nav-child {
 			display: block;
 			padding-top: 10px;
