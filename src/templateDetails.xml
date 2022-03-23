@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="3.8.10" type="template" method="upgrade">
 	<name>tpl_ssstt_shiatsu</name>
-	<creationDate>2020-03-10</creationDate>
+	<creationDate>2022-03-23</creationDate>
 	<author>Gijs Lamon</author>
 	<authorEmail>info@gileba.be</authorEmail>
 	<authorUrl>http://www.gileba.be/</authorUrl>
-	<copyright>(c) 2018-2019 by Gileba, based on the original layout of the website made by Marleen Debuisson-Zwartebroeckx with VistaPrint</copyright>
+	<copyright>(c) 2018 by Gileba, based on the original layout of the website made by Marleen Debuisson-Zwartebroeckx with VistaPrint</copyright>
 	<license>GNU/GPL</license>
-	<version>1.0.3</version>
+	<version>1.1.0</version>
 	<description>Template for Ssstt Shiatsu</description>
 	<files>
 		<filename>index.php</filename>
@@ -22,6 +22,7 @@
 		<position>nav</position>
 		<position>header</position>
 		<position>footer</position>
+		<position>offcanvas</position>
 	</positions>
 	<config>
 		<fieldset name="params">

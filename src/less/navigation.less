@@ -1,52 +1,57 @@
-#nav
-{
-	a, a:hover, a:visited {
+#nav {
+	a,
+	a:hover,
+	a:visited {
 		color: black;
 		text-decoration: none;
 	}
 
-	ul
-	{
+	@media screen and (max-width: 1000px) {
+		text-align: right;
+	}
+
+	ul {
+		@media screen and (max-width: 1000px) {
+			display: none;
+		}
+
 		list-style-type: none;
 		padding-left: 0;
 
-		li
-		{
+		li {
 			display: inline;
 			padding-left: 0;
 			margin-right: 20px;
 			border-bottom: 2px solid #f9c55a;
 			color: black;
 		}
-		
+
 		.active {
 			border-bottom: 2px solid rgb(183, 149, 166);
 			color: rgb(183, 149, 166);
 		}
-		
+
 		.deeper {
 			position: relative;
-			
-			.nav-child
-			{
+
+			.nav-child {
 				display: none;
 				position: absolute;
 				background-color: white;
-				box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+				box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 				z-index: 1;
-				
-				li
-				{
+				left: 0; /** Needed by FF and Chrome to have submenu under menu **/
+
+				li {
 					border-bottom: none;
-					
-					a
-					{
+
+					a {
 						border-bottom: 2px solid #f9c55a;
 					}
 				}
 			}
 		}
-		
+
 		.deeper:hover .nav-child {
 			display: block;
 			padding-top: 10px;
