@@ -24,7 +24,9 @@ $icon = $this->params->get('contact_icons') == 0;
 	&& ($this->item->address || $this->item->suburb  || $this->item->state || $this->item->country || $this->item->postcode)) : ?>
 		<dt>
 			<?php if ($icon && !$this->params->get('marker_address')) : ?>
-				<span class="icon-address" aria-hidden="true"></span><span class="visually-hidden"><?php echo Text::_('COM_CONTACT_ADDRESS'); ?></span>
+				<span class="icon-address" aria-hidden="true"></span><span class="visually-hidden">
+					<?php echo Text::_('COM_CONTACT_ADDRESS'); ?>
+				</span>
 			<?php else : ?>
 				<span class="<?php echo $this->params->get('marker_class'); ?>">
 					<?php echo $this->params->get('marker_address'); ?>
@@ -73,7 +75,8 @@ $icon = $this->params->get('contact_icons') == 0;
 <?php if ($this->item->email_to && $this->params->get('show_email')) : ?>
 	<dt>
 		<?php if ($icon && !$this->params->get('marker_email')) : ?>
-			<span class="icon-envelope" aria-hidden="true"></span><span class="visually-hidden"><?php echo Text::_('COM_CONTACT_EMAIL_LABEL'); ?></span>
+			<span class="icon-envelope" aria-hidden="true"></span>
+			<span class="visually-hidden"><?php echo Text::_('COM_CONTACT_EMAIL_LABEL'); ?></span>
 		<?php else : ?>
 			<span class="<?php echo $this->params->get('marker_class'); ?>">
 				<?php echo $this->params->get('marker_email'); ?>
@@ -90,7 +93,8 @@ $icon = $this->params->get('contact_icons') == 0;
 <?php if ($this->item->telephone && $this->params->get('show_telephone')) : ?>
 	<dt>
 		<?php if ($icon && !$this->params->get('marker_telephone')) : ?>
-				<span class="icon-phone" aria-hidden="true"></span><span class="visually-hidden"><?php echo Text::_('COM_CONTACT_TELEPHONE'); ?></span>
+				<span class="icon-phone" aria-hidden="true"></span>
+				<span class="visually-hidden"><?php echo Text::_('COM_CONTACT_TELEPHONE'); ?></span>
 		<?php else : ?>
 			<span class="<?php echo $this->params->get('marker_class'); ?>">
 				<?php echo $this->params->get('marker_telephone'); ?>
