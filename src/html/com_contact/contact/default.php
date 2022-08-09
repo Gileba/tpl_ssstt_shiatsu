@@ -82,7 +82,6 @@ $htag    = $tparams->get('show_page_heading') ? 'h2' : 'h1';
 	<?php endif; ?>
 
 	<?php if ($this->params->get('show_info', 1)) : ?>
-
 		<div class="address">
 			<div class="com-contact__container">
 <!--			<?php echo '<h3>' . Text::_('COM_CONTACT_DETAILS') . '</h3>'; ?>-->
@@ -91,11 +90,11 @@ $htag    = $tparams->get('show_page_heading') ? 'h2' : 'h1';
 				<div class="com-contact__thumbnail thumbnail">
 					<?php echo LayoutHelper::render(
 						'joomla.html.image',
-						[
+						array(
 							'src'      => $this->item->image,
 							'alt'      => $this->item->name,
 							'itemprop' => 'image',
-						]
+						)
 					); ?>
 				</div>
 			<?php endif; ?>
@@ -161,7 +160,7 @@ $htag    = $tparams->get('show_page_heading') ? 'h2' : 'h1';
 					</dd>
 				</dl>
 			</div>
-		<?php endif; ?>
+	<?php endif; ?>
 
 	<?php if ($tparams->get('show_email_form') && ($this->item->email_to || $this->item->user_id)) : ?>
 <!--		<?php echo '<h3>' . Text::_('COM_CONTACT_EMAIL_FORM') . '</h3>'; ?>-->
