@@ -34,7 +34,7 @@
 		.deeper {
 			position: relative;
 
-			.nav-child {
+			.nav-child, & > ul {
 				display: none;
 				position: absolute;
 				background-color: white;
@@ -52,7 +52,7 @@
 			}
 		}
 
-		.deeper:hover .nav-child {
+		.deeper:hover .nav-child, .deeper:hover > ul {
 			display: block;
 			padding-top: 10px;
 			padding-bottom: 5px;
