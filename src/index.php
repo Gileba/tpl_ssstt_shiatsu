@@ -9,7 +9,7 @@
 ?>
 
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" 
+<html xmlns="http://www.w3.org/1999/xhtml"
    xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" >
    <head>
 		<jdoc:include type="head" />
@@ -22,22 +22,22 @@
 			<div id="wrapper">
 				<div class="offcanvas"><jdoc:include type="modules" name="offcanvas" /></div>
 				<div class="row" id="title">
-					<div class="col-12 col-s-12 col-m-12 col-p-0"><jdoc:include type="modules" name="title" /></div>
+					<div class="col-12 col-s-12 col-m-12 col-p-0"><jdoc:include type="modules" name="title" style="html5" /></div>
 				</div>
 				<div class="row" id="nav">
-					<div class="col-12 col-s-12 col-m-12 col-p-0"><jdoc:include type="modules" name="nav" /></div>
+					<div class="col-12 col-s-12 col-m-12 col-p-0"><jdoc:include type="modules" name="nav" style="html5"  /></div>
 				</div>
 				<div class="row" id="header">
-					<div class="col-12 col-s-12 col-m-12 col-p-0"><jdoc:include type="modules" name="header" /></div>
+					<div class="col-12 col-s-12 col-m-12 col-p-0"><jdoc:include type="modules" name="header" style="html5"  /></div>
 				</div>
 				<div class="row" id="main">
 					<div class="col-12 col-s-12 col-m-12" id="component_wrapper">
 						<div id="messages"><jdoc:include type="message" /></div>
 						<div id="component"><jdoc:include type="component" /></div>
 					</div>
-				</div>			 
+				</div>
 				<div class="row" id="footer">
-					<div class="col-12 col-s-12 col-m-12"><jdoc:include type="modules" name="footer" /></div>
+					<div class="col-12 col-s-12 col-m-12"><jdoc:include type="modules" name="footer" style="html5"  /></div>
 				</div>
 			</div>
 		</div>
